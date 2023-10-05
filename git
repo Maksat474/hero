@@ -1,3 +1,5 @@
 git init - инициализатор гита
 git remote add origin link -  привяззывает ваш проект и ваш репозиторий
-git add namefile/.
+git add namefile/. - отслеживание файла
+git commit -m 'name' - чекпоинт
+git push origin master
