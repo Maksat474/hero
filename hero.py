@@ -29,44 +29,53 @@ print(hero)
 print(f"Длина коронной фразы: {len(hero)}")
 
 
-class SuperHero:
-    def __init__(self, name, hp):
-        self.name = name
-        self.hp = hp
-
-    def increase_hp(self):
-        self.hp **= 2
-        self.fly = True
-
-    def say_true(self):
-        print(f"{self.name} in the True_phrase: True")
-
-
 class AirHero(SuperHero):
-    def __init__(self, name, hp, damage):
-        super().__init__(name, hp)
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+        super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
         self.fly = False
+
+    def double_health(self):
+        self.health_points = self.health_points ** 2
+        self.fly = True
+
+    def true_in_the_true_phrase(self):
+        print(f"True in the True_phrase for {self.nickname}")
 
 
 class EarthHero(SuperHero):
-    def __init__(self, name, hp, damage):
-        super().__init__(name, hp)
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+        super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
         self.fly = False
+
+    def double_health(self):
+        self.health_points = self.health_points ** 2
+        self.fly = True
+
+    def true_in_the_true_phrase(self):
+        print(f"True in the True_phrase for {self.nickname}")
 
 
 class SpaceHero(SuperHero):
-    def __init__(self, name, hp, damage):
-        super().__init__(name, hp)
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+        super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
         self.fly = False
 
+    def double_health(self):
+        self.health_points = self.health_points ** 2
+        self.fly = True
+
+    def true_in_the_true_phrase(self):
+        print(f"True in the True_phrase for {self.nickname}")
+
 
 class Villain(SuperHero):
-    def __init__(self, name, hp, damage):
-        super().__init__(name, hp)
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+        super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
+        self.fly = False
         self.people = "monster"
 
     def gen_x(self):
@@ -76,18 +85,16 @@ class Villain(SuperHero):
         self.damage **= 2
 
 
-air_hero = AirHero("Airman", 100, 10)
-earth_hero = EarthHero("Earthman", 150, 15)
-space_hero = SpaceHero("Spaceman", 200, 20)
-villain = Villain("Evil", 100, 10)
+air_hero = AirHero("Airman", "Летчик", "Летать", 100, "Небо!", 10)
+earth_hero = EarthHero("Earthling", "Земляк", "Сила земли", 120, "Земля!", 15)
+space_hero = SpaceHero("Spaceman", "Космонавт", "Покорение космоса", 150, "Звезды!", 20)
+villain = Villain("Evil", "Злодей", "Злоба", 200, "Зло победит!", 25)
 
-air_hero.increase_hp()
-earth_hero.increase_hp()
-space_hero.increase_hp()
-villain.crit()
+air_hero.double_health()
+earth_hero.double_health()
+space_hero.double_health()
 
-#
-print(f"{air_hero.name}'s HP: {air_hero.hp}, Fly: {air_hero.fly}")
-print(f"{earth_hero.name}'s HP: {earth_hero.hp}, Fly: {earth_hero.fly}")
-print(f"{space_hero.name}'s HP: {space_hero.hp}, Fly: {space_hero.fly}")
-print(f"{villain.name}'s HP: {villain.hp}, People: {villain.people}, Damage: {villain.damage}")
+
+air_hero.true_in_the_true_phrase()
+earth_hero.true_in_the_true_phrase()
+space_hero.true_in_the_true_phrase()
