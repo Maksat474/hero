@@ -1,3 +1,4 @@
 .idea
 __Pycache__/
 venv
+main.py

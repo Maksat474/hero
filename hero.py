@@ -30,10 +30,9 @@ print(f"Длина коронной фразы: {len(hero)}")
 
 
 class AirHero(SuperHero):
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage, fly = False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
-        self.fly = False
 
     def double_health(self):
         self.health_points = self.health_points ** 2
@@ -44,10 +43,9 @@ class AirHero(SuperHero):
 
 
 class EarthHero(SuperHero):
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage, fly = False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
-        self.fly = False
 
     def double_health(self):
         self.health_points = self.health_points ** 2
@@ -58,10 +56,9 @@ class EarthHero(SuperHero):
 
 
 class SpaceHero(SuperHero):
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage, fly = False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
-        self.fly = False
 
     def double_health(self):
         self.health_points = self.health_points ** 2
@@ -72,10 +69,9 @@ class SpaceHero(SuperHero):
 
 
 class Villain(SuperHero):
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage, fly = False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         self.damage = damage
-        self.fly = False
         self.people = "monster"
 
     def gen_x(self):

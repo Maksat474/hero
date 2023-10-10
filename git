@@ -6,3 +6,6 @@ git remote add origin link -  привяззывает ваш проект и в
 git add namefile/. - отслеживание файла
 git commit -m 'name' - чекпоинт
 git push origin master
+
+git status -s показывает изменения
+git rm --cached namefile удаляет файлы
